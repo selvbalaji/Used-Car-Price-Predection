@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>body {
+        font: 'Raleway', sans-serif;
+        color: rgba(0,0,0,.5);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .5em;
+        top: 15%;
+        background: linear-gradient(to right, red , yellow); /* Standard syntax */
+    }
+    
+    h1 {
+        font: 600 3.5em 'Raleway', sans-serif;
+        color: rgba(0,0,0,.5);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .5em;
+        width: 100%;
+    }
+    
+    h3 {
+        font: 900 1em 'Raleway', sans-serif;
+        color: rgba(0,0,0,.5);
+        text-align: center;
+        text-transform: none;
+        letter-spacing: 0.01em;
+    
+    }
+    
+    #Random{
+        margin: 2%;
+        padding: 10px;
+    }
+    }</style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Used Car Price Prediction Result</h1>
+        <div class="result">
+            <h2>Predicted Price: <span id="predicted-price"></span></h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+           
+            var predictedPriceElement = document.getElementById('predicted-price');
+            var nameElement = document.getElementById('name');
+            var locationElement = document.getElementById('location');
+            var yearElement = document.getElementById('year');
+            var kilometersElement = document.getElementById('kilometers');
+            var fuelElement = document.getElementById('fuel');
+            var transmissionElement = document.getElementById('transmission');
+            var ownerElement = document.getElementById('owner');
+            var mileageElement = document.getElementById('mileage');
+            var engineElement = document.getElementById('engine');
+            var powerElement = document.getElementById('power');
+            var seatsElement = document.getElementById('seats');
+            var newPriceElement = document.getElementById('new-price');
+            
+           
+            predictedPriceElement.textContent = "{{ predicted_price }}";
+            nameElement.textContent = "{{ name }}";
+            locationElement.textContent = "{{ location }}";
+            yearElement.textContent = "{{ year }}";
+            kilometersElement.textContent = "{{ kilometers }}";
+            fuelElement.textContent = "{{ fuel }}";
+            transmissionElement.textContent = "{{ transmission }}";
+            ownerElement.textContent = "{{ owner }}";
+            mileageElement.textContent = "{{ mileage }}";
+            engineElement.textContent = "{{ engine }}";
+            powerElement.textContent = "{{ power }}";
+            seatsElement.textContent = "{{ seats }}";
+            newPriceElement.textContent = "{{ new_price }}";
+        });
+    </script>
+</body>
+</html>
